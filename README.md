@@ -23,7 +23,7 @@ Nice to Have
 
 Из корневой папки проекта:
 
-java -jar alpha-gif-service.jar
+java -jar alpha-gif-service-0.0.1-SNAPSHOT-plain.jar
 
 **Docker**
 

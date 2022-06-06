@@ -43,8 +43,6 @@ tasks.named('test') {
 }
 
 jar{
-    archiveName('boris-gif')
-
     manifest {
         attributes "Main-Class": "ru.boris.alphagifservice.AlphaGifServiceApplication"
     }
