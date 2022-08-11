@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+
 }
 
 group = 'ru.boris.alphaGifService'
@@ -43,7 +44,11 @@ tasks.named('test') {
 }
 
 jar{
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
         attributes "Main-Class": "ru.boris.alphagifservice.AlphaGifServiceApplication"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
